@@ -136,11 +136,30 @@
     </section>
   </main>
 
-  <footer><div class="container"><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap"><div class="small muted">© <span id="year"></span> Ruisen Technology.,Co,Ltd</div><div class="small muted">Privacy · Terms</div></div></div></footer>
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div class="small muted">© <span id="year"></span> Ruisen Technology.,Co,Ltd</div>
+        <div class="small muted">
+          <a href="privacy.html" style="color:var(--accent);text-decoration:none;">Privacy Policy</a> · 
+          <span>Terms</span>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    function handleSubmit(e){e.preventDefault();const s=document.getElementById('formStatus');s.textContent='Sending...';setTimeout(()=>{s.textContent='Message sent — thank you!';document.getElementById('contactForm').reset();},900);return false;}
+    function handleSubmit(e){
+      e.preventDefault();
+      const s=document.getElementById('formStatus');
+      s.textContent='Sending...';
+      setTimeout(()=>{
+        s.textContent='Message sent — thank you!';
+        document.getElementById('contactForm').reset();
+      },900);
+      return false;
+    }
   </script>
 </body>
 </html>
